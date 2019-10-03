@@ -71,6 +71,8 @@ class HangpersonGame
       return :lose
     elsif @guesses.length() == @word.length()
       return :win
+    elsif @word.split("").to_set == @guesses.split("").to_set
+      return :win
     else 
       return :play
     end
